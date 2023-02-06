@@ -1,0 +1,29 @@
+                     1. How to compare two JSON have the same properties without order?
+
+let obj1={  
+  name:'person1',
+  age:5
+};
+let obj2={  
+  age:5,  
+  name:'person1'
+};
+JSON.stringify(obj1) === JSON.stringify(obj2)
+    
+_.isEqual(obj1, obj2)
+
+
+
+                         2.Use the rest countries API URL and display all the countries flag..
+                         3.Use the sane rest countries and all print countries name,region, sub-region and populations.
+
+let request =new XMLHTTPRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload=function(){
+let result=JSON.parse(request.response);
+result.foreach(eleement)=>
+console.log(element.flags);
+console.log(element.name.common,element,subregion,element.population);
+});
+}
